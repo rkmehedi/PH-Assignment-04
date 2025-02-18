@@ -76,5 +76,17 @@ function  willSuccess( marks ) {
 //  4th problem ------------------------
 
 function  validProposal( person1 , person2 ) {
+    if (typeof person1 !== 'object' || typeof person2 !== 'object') {
+        return "Invalid";
+}   
+        else if (person1.gender === person2.gender) {
+    return false;
+}   const age=person1.age - person2.age
+    const ageGap= Math.abs(age);
+    const maxGap= 7;
+    if (ageGap>maxGap){
+        return false;
+    }
     
+    return true;
 }
