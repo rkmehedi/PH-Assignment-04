@@ -1,6 +1,8 @@
 
 module.exports = { calculateVAT , validContact,willSuccess,validProposal,calculateSleepTime };
 
+// 1st problem ------------------------
+
 function calculateVAT( price ) {
     if ( price < 0 || typeof price !== 'number' ) {
         
@@ -12,6 +14,7 @@ function calculateVAT( price ) {
 
 } 
     
+//  2nd problem ------------------------
 
 function  validContact( contact ) {
     if ( typeof contact !== 'string' ) {
@@ -42,6 +45,8 @@ function  validContact( contact ) {
     
 }
 
+//  3rd problem ------------------------
+
 function  willSuccess( marks ) {
 
     let arrayTester= Array.isArray(marks);
@@ -68,6 +73,8 @@ function  willSuccess( marks ) {
     }
 }
 
+//  4th problem ------------------------
+
 function  validProposal( person1 , person2 ) {
     if (typeof person1 !== 'object' || typeof person2 !== 'object') {
         return "Invalid";
@@ -83,6 +90,8 @@ function  validProposal( person1 , person2 ) {
     
     return true;
 }
+
+//  5th problem ------------------------
 
 function  calculateSleepTime( times ) {
 
