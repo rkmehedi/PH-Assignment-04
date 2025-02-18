@@ -9,4 +9,7 @@ let checkResult= calculateVAT(price);
 
 //  project 02 ------------------------------
 
-console.log(checkResult);
+let contact=200   ;
+let checkResult2= validContact(contact);
+
+console.log(checkResult2);
