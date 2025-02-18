@@ -1,5 +1,5 @@
 
-module.exports = { calculateVAT , validContact,willSuccess,validProposal };
+module.exports = { calculateVAT , validContact,willSuccess,validProposal,calculateSleepTime };
 
 // 1st problem ------------------------
 
@@ -90,3 +90,29 @@ function  validProposal( person1 , person2 ) {
     
     return true;
 }
+
+//  5th problem ------------------------
+
+function  calculateSleepTime( times ) {
+
+    let totalTimes=0;
+    const timeFrame=60;
+    
+    
+    for (let i = 0; i < times.length; i++){
+    if (typeof times[i] !== 'number') {
+        return "Invalid";
+      }
+      totalTimes=totalTimes+times[i];
+    }
+
+    let hoursDone= parseInt(totalTimes/(timeFrame*timeFrame));
+    let minutesDone=parseInt((totalTimes % (timeFrame*timeFrame))/timeFrame);
+    let secondsDone=parseInt(totalTimes% timeFrame);
+    
+    let final= { hour: hoursDone, minute: minutesDone, second: secondsDone };
+    
+    return final;
+
+}
+
