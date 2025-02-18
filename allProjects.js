@@ -1,5 +1,5 @@
 
-module.exports = { calculateVAT , validContact };
+module.exports = { calculateVAT , validContact,willSuccess,validProposal };
 
 // 1st problem ------------------------
 
@@ -45,3 +45,36 @@ function  validContact( contact ) {
     
 }
 
+//  3rd problem ------------------------
+
+function  willSuccess( marks ) {
+
+    let arrayTester= Array.isArray(marks);
+    
+    if (arrayTester === false){       
+            return "Invalid" ; 
+    }
+    
+    let passed =0,failed=0;
+    for (let i = 0; i < marks.length; i++){
+        if ( marks[i] >= 50) {
+            passed=passed+1;
+        } 
+        else {
+            failed=failed+1;
+        }
+    }
+    
+    if (passed > failed){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+//  4th problem ------------------------
+
+function  validProposal( person1 , person2 ) {
+    
+}
