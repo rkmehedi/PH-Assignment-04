@@ -1,6 +1,4 @@
 
-module.exports = { calculateVAT , validContact,willSuccess,validProposal,calculateSleepTime };
-
 function calculateVAT( price ) {
     if ( price < 0 || typeof price !== 'number' ) {
         
